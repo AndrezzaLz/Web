@@ -1,0 +1,61 @@
+.abas-container input[type="radio"] {
+    display: none;
+}
+
+.abas-navegacao {
+    display: flex;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 1.5rem;
+}
+
+.aba {
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    font-weight: bold;
+    color: #4a90e2;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    border-radius: 8px 8px 0 0;
+    margin-right: 0.5rem;
+    position: relative;
+    bottom: -2px;
+}
+
+.aba:hover {
+    background-color: #e0e0e0;
+}
+
+.conteudo-aba {
+    display: none;
+}
+
+#tab-info:checked ~ .conteudo-container #info-pessoais {
+    display: block;
+}
+
+#tab-hist:checked ~ .conteudo-container #historico {
+    display: block;
+}
+
+#tab-info:checked ~ .abas-navegacao .aba[for="tab-info"],
+#tab-hist:checked ~ .abas-navegacao .aba[for="tab-hist"] {
+    background-color: #4a90e2;
+    color: #fff;
+    border-color: #4a90e2;
+}
+
+#historico table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#historico th, #historico td {
+    padding: 0.8rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#historico th {
+    background-color: #f2f2f2;
+}
