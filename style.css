@@ -1,0 +1,283 @@
+/* Variáveis CSS para a paleta de cores */
+:root {
+    --dark-blue-1: #000814;
+    --dark-blue-2: #001D3D;
+    --dark-blue-3: #b0cde9;
+    --yellow-1: #FFC300;
+    --yellow-2: #FFD60A;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #4a90e2, #50c9c3);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* center logo; other items are abs positioned */
+    align-items: center;
+    padding: 50px 20px;
+    box-sizing: border-box;
+    position: relative;
+    min-height: 110px;
+}
+
+.logo {
+    max-width: 250px;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+/* Painel esquerdo com informações da partida */
+.match-panel {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+    z-index: 2;
+    background: rgba(0,8,20,0.18);
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.06);
+    backdrop-filter: blur(4px);
+    color: white;
+    min-width: 160px;
+}
+
+.match-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 8px;
+}
+
+.match-row .label {
+    font-size: 0.85em;
+    opacity: 0.9;
+}
+
+.match-row .value {
+    font-weight: 700;
+    color: var(--yellow-1);
+}
+
+.board-config { font-weight:700; }
+.moves { font-weight:700; }
+
+/* Botões de modalidade (visual, sem JS) */
+.mode-row { width: 100%; }
+.mode-toggle {
+    display: flex;
+    gap: 6px;
+    margin-top: 6px;
+}
+
+.mode-btn {
+    flex: 1;
+    background: transparent;
+    color: white;
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 6px 8px;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 0.85em;
+}
+
+.mode-btn.active {
+    background: var(--yellow-1);
+    color: var(--dark-blue-1);
+    border-color: rgba(0,0,0,0.08);
+}
+
+.history-button {
+    margin-top: 8px;
+    align-self: stretch;
+    background-color: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.06);
+    color: white;
+    padding: 8px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.history-button:hover {
+    background-color: rgba(255,255,255,0.09);
+}
+
+.top-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.timer {
+    font-size: 1.6em;
+    font-weight: bold;
+    color: var(--dark-blue-1);
+    background-color:var(--yellow-1);
+    padding: 0.2em 0.5em;
+    border-radius: 0.2em;
+}
+
+.settings-button {
+    font-size: 1.5em;
+    background-color: var(--dark-blue-3);
+    border: none; 
+    border-radius: 5px;
+    padding: 10px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.settings-button:hover {
+    background-color: var(--dark-blue-2);
+}
+
+/* cheat buttons empilhados */
+.cheat-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-end;
+    margin: 0 6px;
+}
+
+.cheat-button {
+    font-size: 0.95em;
+    background-color: var(--yellow-1);
+    color: var(--dark-blue-1);
+    border: none;
+    border-radius: 6px;
+    padding: 8px 10px;
+    cursor: pointer;
+    transition: transform .12s ease, background-color .12s ease;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.cheat-button.off {
+    background-color: var(--dark-blue-3);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.06);
+}
+
+.cheat-button:hover { transform: translateY(-2px); }
+
+main {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(8, 100px);
+    grid-template-rows: repeat(8, 100px);
+    gap: 10px;
+    background-color: var(--dark-blue-2);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: var(--dark-blue-3);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    color: var(--yellow-1);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: 2px solid var(--yellow-1);
+}
+
+.card:hover { background-color: var(--dark-blue-2); }
+
+/* Responsividade 
+@media (max-width: 1024px) {
+    .game-board { grid-template-columns: repeat(8, 80px); grid-template-rows: repeat(8, 80px); }
+    .card { width: 80px; height: 80px; }
+}
+
+@media (max-width: 768px) {
+    .game-board {
+        grid-template-columns: repeat(8, 40px);
+        grid-template-rows: repeat(8, 40px);
+        gap: 8px;
+        padding: 15px;
+    }
+
+    .card { width: 40px; height: 40px; }
+    .logo { max-width: 100px; }
+    .timer { font-size: 1.2em; }
+    .settings-button { padding: 8px 12px; font-size: 1em; }
+    .match-panel { min-width: 140px; padding: 8px; }
+    .cheat-button { padding: 6px 8px; font-size: 0.95em; }
+}
+
+@media (max-width: 480px) {
+    .game-board {
+        grid-template-columns: repeat(8, 30px);
+        grid-template-rows: repeat(8, 30px);
+        gap: 5px;
+        padding: 10px;
+    }
+
+    .card { width: 30px; height: 30px; }
+    .logo { max-width: 80px; }
+    .timer { font-size: 1em; }
+    .settings-button { padding: 6px 10px; font-size: 0.9em; }
+    header { flex-direction: column; gap: 10px; padding: 20px 12px; min-height: auto; }
+
+    .match-panel {
+        position: static;
+        transform: none;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 10px;
+    }
+
+    .top-right {
+        position: static;
+        transform: none;
+        margin-top: 8px;
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    .cheat-buttons { flex-direction: row; align-items: center; }
+    .logo { position: static; transform: none; margin-top: 6px; }
+}
+*/

@@ -1,11 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Jogo da Memória</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <header>
+        <!-- Painel de informações da partida -->
+        <div class="match-panel">
+            <div class="match-row">
+                <span class="label">Jogadas:</span>
+                <span class="value moves">0</span>
+            </div>
+            <div class="match-row">
+                <span class="label">Tabuleiro:</span>
+                <span class="value board-config">8x8</span>
+            </div>
+            <div class="match-row mode-row">
+                <span class="label">Modo:</span>
+                <div class="mode-toggle">
+                    <button class="mode-btn active">Clássica</button>
+                    <button class="mode-btn">Contra o Tempo</button>
+                </div>
+            </div>
+            <button class="history-button">Histórico</button>
+        </div>
+
+        <div class="top-right">
+            <div class="timer">00:00</div>
+
+            <!-- Botões de trapaça -->
+            <div class="cheat-buttons">
+                <button class="cheat-button on">Ativar Trapaça</button>
+                <button class="cheat-button off">Desativar Trapaça</button>
+            </div>
+
+            <button class="settings-button">⚙️</button>
+        </div>
+
+        <img src="img/logoYASH.png" alt="YASH Logo" class="logo">
+    </header>
+
+    <main>
+        <div class="game-board">
+            <!-- Cartas -->
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+        </div>
+    </main>
 </body>
 </html>
