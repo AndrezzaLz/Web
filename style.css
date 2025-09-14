@@ -187,3 +187,108 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+body:has(#config-form) .container {
+    max-width: 500px;
+}
+
+#config-form {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#config-form .config-group {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+#config-form .config-title {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 0.8rem;
+}
+
+#config-form .radio-option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: -2px; 
+}
+
+#config-form .option-description {
+    font-size: 0.9rem;
+    color: #6c757d;
+    padding-left: 20px;
+    margin-top: 0.25rem;
+    margin-bottom: 0.75rem;
+}
+
+#config-form select {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+#config-form button {
+    background: #4a90e2;
+    color: #fff;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 1rem;
+}
+
+#config-form button:hover {
+    background-color: #357ab8;
+}
+
+.secondary-nav {
+    text-align: center;
+    color: #fff;
+}
+.secondary-nav a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    font-size: 0.9rem;
+}
+.secondary-nav a:hover {
+    text-decoration: underline;
+}
+#ranking-table {
+    width: 100%;
+    margin-top: 2rem;
+    border-collapse: collapse; 
+    font-size: 0.9rem;
+}
+/* Tela ranking */
+#ranking-table th,
+#ranking-table td {
+    padding: 0.8rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#ranking-table thead th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    color: #343a40;
+}
+
+#ranking-table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+#ranking-table tbody tr:hover {
+    background-color: #e9ecef;
+}
