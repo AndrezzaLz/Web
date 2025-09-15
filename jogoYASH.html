@@ -6,60 +6,6 @@
     <title>Jogo da Memória</title>
     <link rel="stylesheet" href="css/jogoYASH.css">
     <link rel="stylesheet" href="css/style.css">
-    <style>
-      /* ===== Menu de Configurações (sem JS) ===== */
-      .settings-toggle {
-          display: none;
-      }
-
-      .settings-button {
-          font-size: 1.5em;
-          background-color: var(--dark-blue-3);
-          border: none; 
-          border-radius: 5px;
-          padding: 10px 10px;
-          cursor: pointer;
-          transition: background-color 0.3s ease;
-      }
-      .settings-button:hover {
-          background-color: var(--dark-blue-2);
-      }
-
-      .settings-menu {
-          display: none;
-          position: absolute;
-          top: 60px;
-          right: 20px;
-          background: var(--dark-blue-2);
-          border: 1px solid rgba(255,255,255,0.1);
-          border-radius: 8px;
-          padding: 10px;
-          box-shadow: 0 6px 12px rgba(0,0,0,0.4);
-          flex-direction: column;
-          gap: 8px;
-          z-index: 100;
-      }
-
-      .settings-menu a {
-          display: block;
-          padding: 8px 12px;
-          color: white;
-          text-decoration: none;
-          font-weight: bold;
-          border-radius: 6px;
-          transition: background 0.2s;
-      }
-
-      .settings-menu a:hover {
-          background: var(--yellow-1);
-          color: var(--dark-blue-1);
-      }
-
-      /* Quando o checkbox for marcado, exibe o menu */
-      .settings-toggle:checked ~ .settings-menu {
-          display: flex;
-      }
-    </style>
 </head>
 <body>
   <header>
@@ -94,8 +40,6 @@
             <button class="cheat-button on">Ativar Trapaça</button>
             <button class="cheat-button off">Desativar Trapaça</button>
           </div>
-
-          <!-- Checkbox hack para abrir menu -->
           <input type="checkbox" id="settingsToggle" class="settings-toggle">
           <label for="settingsToggle" class="settings-button">⚙️</label>
 
