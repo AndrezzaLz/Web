@@ -255,3 +255,33 @@
     }
     .cheat-buttons { flex-direction: row; align-items: center; }
 }
+/* ===== Menu de Configurações ===== */
+.settings-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: var(--dark-blue-2);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+    flex-direction: column;
+    gap: 8px;
+    z-index: 100;
+}
+
+.settings-menu a {
+    display: block;
+    padding: 8px 12px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+.settings-menu a:hover {
+    background: var(--yellow-1);
+    color: var(--dark-blue-1);
+}
