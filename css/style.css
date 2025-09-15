@@ -25,7 +25,7 @@ body {
     max-width: 800px;
     text-align: center;
     border: 2px solid #000814;
-    margin: 5vh auto;
+    /* margin: 5vh auto; */
 }
 
 .form-grid {
@@ -101,8 +101,9 @@ body {
 .register-submit {
     margin-top: 1.5rem;
     width: 100%;
-    background: #FFC300;
-    color: #000814;
+    background: #4a90e2;
+    font-size: 1rem;
+    color: #fff;
     padding: 0.7rem;
     border: none;
     border-radius: 8px;
@@ -112,7 +113,7 @@ body {
 }
 
 .register-submit:hover {
-    background: #FFD60A;
+    background: #357ab8;
 }
 
 .btn-voltar {
@@ -165,7 +166,6 @@ body {
 .register-box {
     text-align: center;
     color: #fff;
-    font-size: 0.95rem;
 }
 
 .register-text {
@@ -180,6 +180,51 @@ body {
 
 .register-text:hover {
     color: #000814;
+}
+
+.container-ranking {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 1rem;
+}
+
+.container-ranking table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+.container-ranking th,
+.container-ranking td {
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.container-ranking th {
+    background: #003566;
+    color: #fff;
+}
+
+/* Estilização para mudar a cor de cada linha da tabela para melhor leitura */
+.container-ranking tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+.nav-secundaria {
+    margin-top: 20px;
+    color: white;
+}
+
+.nav-secundaria a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-secundaria a:hover {
+    text-decoration: underline;
 }
 
 @media (max-width: 768px) {

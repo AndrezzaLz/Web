@@ -5,12 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - YASH</title>
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Estilização do Favicon do site -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
 </head>
 <body>
     <div class="container">
         <!-- <h1>YASH</h1> -->
         <img src="img/logoYASH.png" alt="YASH">
-        <form action="dashboard.html" method="post" class="login-form">
+        <!-- Quando adicionar a parte do JavaScript trocar o form para action='dashboard.php' method='post' -->
+        <form action="configYASH.html" method="get" class="login-form">
             <label for="username">Usuário</label>
             <input type="text" id="username" name="username" required>
 

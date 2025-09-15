@@ -7,11 +7,19 @@
     <title>Configurações - YASH</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/configuracoes.css">
+
+    <!-- Estilização do Favicon do site -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
 </head>
 
 <body>
+    <a href="configYASH.html" class="btn-voltar">← Voltar</a>
+
     <main class="container">
-        <img src="img/logoYASH.png" alt="YASH">
+        <img src="img/YASH.png" alt="YASH">
         <h1>Configurações Pessoais</h1>
 
         <div class="abas-container">
@@ -52,54 +60,60 @@
                                 <input type="text" id="username" name="username" value="SeuUsuario123" readonly>
                             </div>
                             <div class="form-group">
-                                <label for="password">Nova Senha</label>
+                                <label for="password">Senha Atual</label>
                                 <input type="password" id="password" name="password">
+                            </div>
+                            <!-- Quando tiver o php colocar para confirmar a nova senha e verificar igualdade das senhas para alterar -->
+                            <div class="form-group">
+                                <label for="newPassword">Nova Senha</label>
+                                <input type="password" id="newPassword" name="newPassword">
                             </div>
                         </div>
                         <button type="submit" class="register-submit">Salvar Alterações</button>
                     </form>
                 </section>
-
-                <section id="historico" class="conteudo-aba">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Dimensões</th>
-                                <th>Modalidade</th>
-                                <th>Tempo Gasto</th>
-                                <th>Jogadas</th>
-                                <th>Resultado</th>
-                                <th>Data/Hora</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>8x8</td>
-                                <td>Contra o Tempo</td>
-                                <td>2:36</td>
-                                <td>93</td>
-                                <td>Vitória</td>
-                                <td>10/05/2025 - 08:23</td>
-                            </tr>
-                            <tr>
-                                <td>4x4</td>
-                                <td>Clássica</td>
-                                <td>1:13</td>
-                                <td>29</td>
-                                <td>Vitória</td>
-                                <td>10/05/2025 - 08:50</td>
-                            </tr>
-                            <tr>
-                                <td>8x8</td>
-                                <td>Contra o Tempo</td>
-                                <td>23:10</td>
-                                <td>45</td>
-                                <td>Derrota</td>
-                                <td>13/03/2025 - 13:13</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </section>
+                <div class="container-ranking">
+                    <section id="historico" class="conteudo-aba">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Dimensões</th>
+                                    <th>Modalidade</th>
+                                    <th>Tempo Gasto</th>
+                                    <th>Jogadas</th>
+                                    <th>Resultado</th>
+                                    <th>Data/Hora</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>8x8</td>
+                                    <td>Contra o Tempo</td>
+                                    <td>2:36</td>
+                                    <td>93</td>
+                                    <td>Vitória</td>
+                                    <td>10/05/2025 - 08:23</td>
+                                </tr>
+                                <tr>
+                                    <td>4x4</td>
+                                    <td>Clássica</td>
+                                    <td>1:13</td>
+                                    <td>29</td>
+                                    <td>Vitória</td>
+                                    <td>10/05/2025 - 08:50</td>
+                                </tr>
+                                <tr>
+                                    <td>8x8</td>
+                                    <td>Contra o Tempo</td>
+                                    <td>23:10</td>
+                                    <td>45</td>
+                                    <td>Derrota</td>
+                                    <td>13/03/2025 - 13:13</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                </div>
             </div>
         </div>
     </main>

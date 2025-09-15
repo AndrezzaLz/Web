@@ -5,74 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ranking - YASH</title>
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Estilização do Favicon do site -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
 </head>
 <body>
-    <a href="escolha-jogo.html" class="btn-voltar">← Voltar</a>
+    <a href="configYASH.html" class="btn-voltar">← Voltar</a>
 
     <div class="container">
-        <img src="img/logoYASH.png" alt="YASH">
+        <img src="img/YASH.png" alt="YASH">
         <h1>Ranking Global</h1>
 
-        <table id="ranking-table">
-            <thead>
-                <tr>
-                    <th>Pos.</th>
-                    <th>Jogador</th>
-                    <th>Dimensões</th>
-                    <th>Modalidade</th>
-                    <th>Jogadas</th>
-                    <th>Data</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1º</td>
-                    <td>PlayerOne</td>
-                    <td>8x8</td>
-                    <td>Clássico</td>
-                    <td>90</td>
-                    <td>10/09/2025</td>
-                </tr>
-                <tr>
-                    <td>2º</td>
-                    <td>NinjaMind</td>
-                    <td>8x8</td>
-                    <td>Contra o Tempo</td>
-                    <td>93</td>
-                    <td>11/09/2025</td>
-                </tr>
-                <tr>
-                    <td>3º</td>
-                    <td>Mestra</td>
-                    <td>6x6</td>
-                    <td>Clássico</td>
-                    <td>45</td>
-                    <td>09/09/2025</td>
-                </tr>
-                 <tr>
-                    <td>4º</td>
-                    <td>Speedy</td>
-                    <td>4x4</td>
-                    <td>Contra o Tempo</td>
-                    <td>20</td>
-                    <td>12/09/2025</td>
-                </tr>
-                <tr>
-                    <td>5º</td>
-                    <td>CardMaster</td>
-                    <td>8x8</td>
-                    <td>Clássico</td>
-                    <td>102</td>
-                    <td>10/09/2025</td>
-                </tr>
-            </tbody>
-        </table>
+        <section id="historico" class="conteudo-aba">
+            <div class="container-ranking">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Dimensões</th>
+                            <th>Modalidade</th>
+                            <th>Tempo Gasto</th>
+                            <th>Jogadas</th>
+                            <th>Resultado</th>
+                            <th>Data/Hora</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>8x8</td>
+                            <td>Contra o Tempo</td>
+                            <td>2:36</td>
+                            <td>93</td>
+                            <td>Vitória</td>
+                            <td>10/05/2025 - 08:23</td>
+                        </tr>
+                        <tr>
+                            <td>4x4</td>
+                            <td>Clássica</td>
+                            <td>1:13</td>
+                            <td>29</td>
+                            <td>Vitória</td>
+                            <td>10/05/2025 - 08:50</td>
+                        </tr>
+                        <tr>
+                            <td>8x8</td>
+                            <td>Contra o Tempo</td>
+                            <td>23:10</td>
+                            <td>45</td>
+                            <td>Derrota</td>
+                            <td>13/03/2025 - 13:13</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
     </div>
 
-    <div class="secondary-nav">
+    <!-- Acho que não tem necessidade toda pagina poder dar 3 opções para o usuario -->
+    <!-- <div class="secondary-nav">
         <a href="escolha-jogo.html">Jogar Novamente</a> |
         <a href="configuracoes_p.html">Configurações</a> |
         <a href="login.html">Sair</a>
-    </div>
+    </div> -->
 </body>
 </html>

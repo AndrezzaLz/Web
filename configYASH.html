@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurar Partida - YASH</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/configYASH.css">
+
+    <!-- Estilização do Favicon do site -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+</head>
+<body>
+    
+    <div class="container">
+        <img src="img/logoYASH.png" alt="YASH">
+
+        <!-- Quando adicionar a parte do JavaScript trocar o form para action='jogoYASH.php' method='post' -->
+        <form id="config-form" action="jogoYASH.html" method="get">
+
+            <div class="config-group">
+                <label class="config-title">Modo de Jogo</label>
+
+                <div class="radio-option">
+                    <input type="radio" id="modoClassico" name="modo_jogo" value="classico" checked>
+                    <label for="modoClassico">Clássico</label>
+                </div>
+                <p class="option-description">Jogo da memória tradicional: encontre todos os pares no menor número de jogadas.</p>
+                
+                <div class="radio-option">
+                    <input type="radio" id="modoContraTempo" name="modo_jogo" value="contra_tempo">
+                    <label for="modoContraTempo">Contra o Tempo</label>
+                </div>
+                <p class="option-description">Desafie-se a encontrar todos os pares antes que o tempo acabe.</p>
+            </div>
+
+            <div class="config-group">
+                <label for="tamanhoTabuleiro" class="config-title">Tamanho do Tabuleiro</label>
+                <select id="tamanhoTabuleiro" name="tamanho_tabuleiro">
+                    <option value="2x2">2x2 (4 peças)</option>
+                    <option value="4x4" selected>4x4 (16 peças)</option>
+                    <option value="6x6">6x6 (36 peças)</option>
+                    <option value="8x8">8x8 (64 peças)</option>
+                </select>
+            </div>
+
+            <button type="submit" class="config-btn">Iniciar Jogo</button>
+        </form>
+    </div>
+
+    <div class="nav-secundaria">
+        <a href="ranking.html">Ranking</a> |
+        <a href="configuracoes_p.html">Configurações</a> |
+        <a href="login.html">Sair</a>
+    </div>
+</body>
+</html>

@@ -44,18 +44,3 @@
     color: #fff;
     border-color: #4a90e2;
 }
-
-#historico table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-#historico th, #historico td {
-    padding: 0.8rem;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-}
-
-#historico th {
-    background-color: #f2f2f2;
-}

@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro - YASH</title>
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Estilização do Favicon do site -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
 </head>
 <body>
     <a href="login.html" class="btn-voltar">← Voltar</a>
@@ -13,7 +19,8 @@
     <div class="container">
         <img src="img/logoYASH.png" alt="YASH">
         <!-- <h1>CADASTRO</h1> -->
-        <form action="login.html" method="post" class="register-form">
+        <!-- Quando adicionar a parte do JavaScript trocar o form para action='cadastro.php' method='post' -->
+        <form action="login.html" method="get" class="register-form">
 
             <div class="form-grid">
                 <div class="form-group">
@@ -49,6 +56,11 @@
                 <div class="form-group">
                     <label for="password">Senha</label>
                     <input type="password" id="password" name="password" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="">Confirmar Senha</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
                 </div>
             </div>
             <button type="submit" class="register-submit">Cadastrar</button>

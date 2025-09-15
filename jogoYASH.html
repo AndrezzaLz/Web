@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>YASH - Jogo da Memória</title>
+  <link rel="stylesheet" href="css/jogoYASH.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Estilização do Favicon do site -->
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="favicon_io/site.webmanifest">
+</head>
+<body>
+  <main class="app">
+    <!-- Área esquerda (tabuleiro) -->
+    <div class="logo-wrap">
+      <img src="img/YASH.png" alt="YASH" class="logo-img" style="width: 90px; height: auto;">
+      <div class="logo-text">
+        <h1>Jogo da Memória</h1>
+        <p id="matchInfo">Modo Clássico • Jogador • Ranking</p>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h3>Informações da partida</h3>
+      <div class="meta">
+        <div class="chip" id="chipModo">Modo: Clássica</div>
+        <div class="chip" id="chipDimensoes">Dimensões: 4×4</div>
+        <div class="chip" id="chipJogadas">Jogadas: 0</div>
+      </div>
+    </div>
+
+    <div class="top-controls">
+      <button class="btn" id="novoJogo">Novo Jogo</button>
+      <button class="btn" id="openSettings">Configurações</button>
+      <button class="btn" id="sair">Sair</button>
+      <div class="timer">⏱ <span id="timerDisplay">00:00</span></div>
+    </div>
+
+    <div class="board-wrap">
+      <div class="board">
+        <div class="grid" id="grid"></div>
+      </div>
+    </div>
+
+    
+  </main>
+
+  <!-- Modal Configurações -->
+  <div id="settingsModal">
+    <div class="modal-box">
+      <div style="display:flex; justify-content:space-between; align-items:center;">
+        <strong>Configurações</strong>
+        <button id="closeSettings">✕</button>
+      </div>
+      <p>Aqui você poderá alterar preferências do jogo.</p>
+      <p>Novidades em breve!</p>
+    </div>
+  </div>
+
+  <script>
+    const IMAGES = ["🍎","🍋","🍓","🍉","🍊","🍇","🍑","🍌"];
+    const GRID_SIZE = 16;
+    let jogadas = 0;
+
+    function shuffle(a){
+      for(let i=a.length-1;i>0;i--){
+        const j=Math.floor(Math.random()*(i+1));
+        [a[i],a[j]]=[a[j],a[i]];
+      }
+      return a;
+    }
+
+    const pairs = []; 
+    for(let i=0;i<GRID_SIZE/2;i++){
+      pairs.push(IMAGES[i%IMAGES.length]);
+      pairs.push(IMAGES[i%IMAGES.length]);
+    }
+
+    shuffle(pairs);
+    const grid=document.getElementById('grid');
+    
+    for(let i=0;i<GRID_SIZE;i++){
+      const card=document.createElement('div'); 
+      card.className='card';
+      card.innerHTML=`<div class="card-inner">
+        <div class="card-face face-front"><div style="font-size:38px;">${pairs[i]}</div></div>
+        <div class="card-face face-back">?</div></div>`;
+      card.addEventListener('click',()=>{
+        if(!card.classList.contains('flipped')) {
+          jogadas++;
+          document.getElementById("chipJogadas").innerText = "Jogadas: " + jogadas;
+        }
+        card.classList.toggle('flipped')
+      });
+      grid.appendChild(card);
+    }
+    const settingsModal=document.getElementById('settingsModal');
+    document.getElementById('openSettings').onclick=()=>settingsModal.style.display='flex';
+    document.getElementById('closeSettings').onclick=()=>settingsModal.style.display='none';
+
+    document.getElementById('novoJogo').onclick=()=>window.location.href = "configYASH.html";
+    document.getElementById('sair').onclick=()=>window.location.href = "login.html";
+    settingsModal.onclick=(e)=>{
+      if(e.target===settingsModal)
+        settingsModal.style.display='none';
+    };
+  </script>
+</body>
+</html>
+
