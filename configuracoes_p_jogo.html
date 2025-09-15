@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Configurações - YASH</title>
+    <title>Histórico de Partidas - YASH</title>
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/configuracoes.css">
@@ -19,106 +19,52 @@
 
     <main class="container">
         <img src="img/YASH.png" alt="Logo da YASH" style="width: 200px;">
-        <h1>Configurações Pessoais</h1>
+        <h1>Histórico de Partidas</h1>
+        
+        <section id="historico" style="display: block; padding-top: 1rem;">
+            
+            <h2>Jogador X</h2>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Dimensões</th>
+                        <th>Modalidade</th>
+                        <th>Tempo Gasto</th>
+                        <th>Jogadas</th>
+                        <th>Resultado</th>
+                        <th>Data/Hora</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>8x8</td>
+                        <td>Contra o Tempo</td>
+                        <td>2:36</td>
+                        <td>93</td>
+                        <td>Vitória</td>
+                        <td>10/05/2025 - 08:23</td>
+                    </tr>
+                    <tr>
+                        <td>4x4</td>
+                        <td>Clássica</td>
+                        <td>1:13</td>
+                        <td>29</td>
+                        <td>Vitória</td>
+                        <td>10/05/2025 - 08:50</td>
+                    </tr>
+                    <tr>
+                        <td>8x8</td>
+                        <td>Contra o Tempo</td>
+                        <td>23:10</td>
+                        <td>45</td>
+                        <td>Derrota</td>
+                        <td>13/03/2025 - 13:13</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
 
-        <div class="abas-container">
-            <input type="radio" name="abas" id="tab-info" checked>
-            <input type="radio" name="abas" id="tab-hist">
-
-            <nav class="abas-navegacao">
-                <label for="tab-info" class="aba">Informações Pessoais</label>
-                <label for="tab-hist" class="aba">Histórico do Jogador</label>
-            </nav>
-
-            <div class="conteudo-container">
-                <section id="info-pessoais" class="conteudo-aba">
-                    
-                    <h2>Informações Pessoais</h2>
-
-                    <form class="register-form">
-                        <div class="form-grid">
-                            <div class="form-group">
-                                <label for="fullName">Nome Completo</label>
-                                <input type="text" id="fullName" name="fullName" value="Seu Nome Completo">
-                            </div>
-                            <div class="form-group">
-                                <label for="dateBirth">Data de Nascimento</label>
-                                <input type="text" id="dateBirth" name="dateBirth" value="01/01/2000" readonly>
-                            </div>
-                            <div class="form-group">
-                                <label for="cpf">CPF</label>
-                                <input type="text" id="cpf" name="cpf" value="123.456.789-00" readonly>
-                            </div>
-                            <div class="form-group">
-                                <label for="telephone">Telefone</label>
-                                <input type="tel" id="telephone" name="telephone" value="(11) 98765-4321">
-                            </div>
-                            <div class="form-group">
-                                <label for="email">E-mail</label>
-                                <input type="email" id="email" name="email" value="seuemail@exemplo.com">
-                            </div>
-                            <div class="form-group">
-                                <label for="username">Nome de Usuario</label>
-                                <input type="text" id="username" name="username" value="SeuUsuario123" readonly>
-                            </div>
-                            <div class="form-group">
-                                <label for="password">Senha Atual</label>
-                                <input type="password" id="password" name="password">
-                            </div>
-                            <div class="form-group">
-                                <label for="newPassword">Nova Senha</label>
-                                <input type="password" id="newPassword" name="newPassword">
-                            </div>
-                        </div>
-                        <button type="submit" class="register-submit">Salvar Alterações</button>
-                    </form>
-                </section>
-                
-                <section id="historico" class="conteudo-aba">
-
-                    <h2>Histórico do Jogador</h2>
-                    
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Dimensões</th>
-                                <th>Modalidade</th>
-                                <th>Tempo Gasto</th>
-                                <th>Jogadas</th>
-                                <th>Resultado</th>
-                                <th>Data/Hora</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>8x8</td>
-                                <td>Contra o Tempo</td>
-                                <td>2:36</td>
-                                <td>93</td>
-                                <td>Vitória</td>
-                                <td>10/05/2025 - 08:23</td>
-                            </tr>
-                            <tr>
-                                <td>4x4</td>
-                                <td>Clássica</td>
-                                <td>1:13</td>
-                                <td>29</td>
-                                <td>Vitória</td>
-                                <td>10/05/2025 - 08:50</td>
-                            </tr>
-                            <tr>
-                                <td>8x8</td>
-                                <td>Contra o Tempo</td>
-                                <td>23:10</td>
-                                <td>45</td>
-                                <td>Derrota</td>
-                                <td>13/03/2025 - 13:13</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </section>
-            </div>
-        </div>
     </main>
 </body>
 </html>
