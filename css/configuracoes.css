@@ -1,3 +1,5 @@
+
+/* esconde os botões de rádio que controlam a lógica */
 .abas-container input[type="radio"] {
     display: none;
 }
@@ -19,28 +21,58 @@
     border-radius: 8px 8px 0 0;
     margin-right: 0.5rem;
     position: relative;
-    bottom: -2px;
+    bottom: -2px; /* Alinha a aba com a borda inferior */
+    transition: background-color 0.3s;
 }
 
 .aba:hover {
     background-color: #e0e0e0;
 }
 
+/* esconde o conteúdo de todas as abas fehcadas*/
 .conteudo-aba {
     display: none;
+    padding-top: 1rem;
 }
 
-#tab-info:checked ~ .conteudo-container #info-pessoais {
-    display: block;
-}
-
+/* mostra o conteúdo da aba selecionada */
+#tab-info:checked ~ .conteudo-container #info-pessoais,
 #tab-hist:checked ~ .conteudo-container #historico {
     display: block;
 }
 
+/* estilo para a aba que esta selecionada */
 #tab-info:checked ~ .abas-navegacao .aba[for="tab-info"],
 #tab-hist:checked ~ .abas-navegacao .aba[for="tab-hist"] {
-    background-color: #4a90e2;
-    color: #fff;
-    border-color: #4a90e2;
+    background-color: #fff;
+    color: #003566;
+    border-color: #ccc;
+    border-bottom: 2px solid #fff; /* Truque para a aba parecer conectada ao conteúdo */
+}
+
+#historico table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#historico th,
+#historico td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+#historico thead {
+    background-color: #003566; 
+    color: #ffffff;
+}
+
+#historico tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+#historico tbody tr:hover {
+    background-color: #e9ecef;
 }
