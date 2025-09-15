@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jogo da Memória</title>
-  <link rel="stylesheet" href="css/jogoYASH.css">
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Memória</title>
+    <link rel="stylesheet" href="css/jogoYASH.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
   <header>
     <img src="img/logoYASH.png" alt="YASH Logo" class="logo">
 
     <div class="game-info">
+      <!-- Painel de informações da partida -->
       <div class="match-panel">
         <div class="match-row">
           <span class="label">Jogadas:</span>
@@ -30,7 +29,7 @@
             <button class="mode-btn">Contra o Tempo</button>
           </div>
         </div>
-        <a href="configuracoes_p_jogo.html" class="history-button">Histórico</a>
+        <button class="history-button">Histórico</button>
       </div>
 
       <div class="top-right">
@@ -42,89 +41,109 @@
             <button class="cheat-button off">Desativar Trapaça</button>
           </div>
 
-          <a href="configYASH.html" class="settings-button" id="settingsBtn">⚙️</a>
+          <!-- Botão de configurações -->
+          <button class="settings-button" id="settingsBtn">⚙️</button>
 
+          <!-- Menu de configurações -->
+          <div class="settings-menu" id="settingsMenu">
+            <a href="login.html">Ir para Login</a>
+            <a href="ranking.html">Ranking Global</a>
+            <a href="cadastro.html">Editar Cadastro</a>
+          </div>
         </div>
       </div>
     </div>
   </header>
 
-  <main>
-    <div class="game-board">
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-    </div>
-  </main>
-</body>
+    <main>
+      <div class="game-board">
+        <!-- Cartas -->
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+      </div>
+    </main>
 
+    <!-- Script do menu de configurações -->
+    <script>
+      const settingsBtn = document.getElementById("settingsBtn");
+      const settingsMenu = document.getElementById("settingsMenu");
+
+      settingsBtn.addEventListener("click", () => {
+        settingsMenu.style.display = settingsMenu.style.display === "flex" ? "none" : "flex";
+      });
+
+      // fecha o menu se clicar fora
+      document.addEventListener("click", (e) => {
+        if (!settingsBtn.contains(e.target) && !settingsMenu.contains(e.target)) {
+          settingsMenu.style.display = "none";
+        }
+      });
+    </script>
+</body>
 </html>
