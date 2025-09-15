@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,9 +13,9 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
     <link rel="manifest" href="favicon_io/site.webmanifest">
 </head>
+
 <body>
     <a href="login.html" class="btn-voltar">← Voltar</a>
-
 
     <div class="container">
         <img src="img/logoYASH.png" alt="YASH">
@@ -30,27 +31,27 @@
 
                 <div class="form-group">
                     <label for="dateBirth">Data de Nascimento</label>
-                    <input type="dateBirth" id="dateBirth" name="dateBirth" required>
+                    <input type="date" id="dateBirth" name="dateBirth" required>
                 </div>
 
                 <div class="form-group">
                     <label for="cpf">CPF</label>
-                    <input type="cpf" id="cpf" name="cpf" required>
+                    <input type="text" id="cpf" name="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00" required>
                 </div>
 
                 <div class="form-group">
                     <label for="telephone">Telefone</label>
-                    <input type="telephone" id="telephone" name="telephone" required>
+                    <input type="tel" id="telephone" name="telephone" placeholder="(00) 00000-0000" required>
                 </div>
-                
+
                 <div class="form-group">
                     <label for="email">E-mail</label>
                     <input type="email" id="email" name="email" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="username">Nome de Usuario</label>
-                    <input type="username" id="username" name="username" required>
+                    <label for="username">Nome de Usuário</label>
+                    <input type="text" id="username" name="username" required>
                 </div>
 
                 <div class="form-group">
@@ -59,7 +60,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="">Confirmar Senha</label>
+                    <label for="confirmPassword">Confirmar Senha</label>
                     <input type="password" id="confirmPassword" name="confirmPassword" required>
                 </div>
             </div>
@@ -67,4 +68,5 @@
         </form>
     </div>
 </body>
+
 </html>
