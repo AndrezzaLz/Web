@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -7,17 +7,23 @@
     <title>Configurações - YASH</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/configuracoes.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
 </head>
 
 <body>
-    <a href="index_jogo.html" class="btn-voltar">← Voltar</a>
+    <a href="configYASH.html" class="btn-voltar">← Voltar</a>
+
     <main class="container">
-        <img src="img/logoYASH.png" alt="YASH">
+        <img src="img/YASH.png" alt="YASH">
         <h1>Configurações Pessoais</h1>
 
         <div class="abas-container">
-            <input type="radio" name="abas" id="tab-info" checked="checked" />
-            <input type="radio" name="abas" id="tab-hist" />
+            <input type="radio" name="abas" id="tab-info" checked>
+            <input type="radio" name="abas" id="tab-hist">
 
             <nav class="abas-navegacao">
                 <label for="tab-info" class="aba">Informações Pessoais</label>
@@ -26,6 +32,7 @@
 
             <div class="conteudo-container">
                 <section id="info-pessoais" class="conteudo-aba">
+                    <h2>Informações Pessoais</h2>
                     <form class="register-form">
                         <div class="form-grid">
                             <div class="form-group">
@@ -42,7 +49,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="telephone">Telefone</label>
-                                <input type="text" id="telephone" name="telephone" value="(11) 98765-4321">
+                                <input type="tel" id="telephone" name="telephone" value="(11) 98765-4321">
                             </div>
                             <div class="form-group">
                                 <label for="email">E-mail</label>
@@ -53,15 +60,20 @@
                                 <input type="text" id="username" name="username" value="SeuUsuario123" readonly>
                             </div>
                             <div class="form-group">
-                                <label for="password">Nova Senha</label>
+                                <label for="password">Senha Atual</label>
                                 <input type="password" id="password" name="password">
+                            </div>
+                            <div class="form-group">
+                                <label for="newPassword">Nova Senha</label>
+                                <input type="password" id="newPassword" name="newPassword">
                             </div>
                         </div>
                         <button type="submit" class="register-submit">Salvar Alterações</button>
                     </form>
                 </section>
-
+                
                 <section id="historico" class="conteudo-aba">
+                    <h2>Histórico do Jogador</h2>
                     <table>
                         <thead>
                             <tr>
@@ -105,5 +117,4 @@
         </div>
     </main>
 </body>
-
 </html>
