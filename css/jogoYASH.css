@@ -189,13 +189,13 @@
 
 /* Tabuleiro do jogo */
 .game-board {
-    display: grid;
-    grid-template-columns: repeat(8, 100px);
-    grid-template-rows: repeat(8, 100px);
+    display: inline-grid;
+    place-content: center;
     gap: 10px;
     background-color: var(--dark-blue-2);
     padding: 20px;
     border-radius: 10px;
+    margin: 0 auto; 
 }
 
 .card {
@@ -216,8 +216,6 @@
 
 @media (max-width: 768px) {
     .game-board {
-        grid-template-columns: repeat(8, 40px);
-        grid-template-rows: repeat(8, 40px);
         gap: 8px;
         padding: 15px;
     }
@@ -230,8 +228,6 @@
 
 @media (max-width: 480px) {
     .game-board {
-        grid-template-columns: repeat(8, 30px);
-        grid-template-rows: repeat(8, 30px);
         gap: 5px;
         padding: 10px;
     }
@@ -336,4 +332,50 @@
 /* Quando o checkbox for marcado, exibe o menu */
 .settings-toggle:checked ~ .settings-menu {
     display: flex;
+}
+
+
+/* Configurações para animação das cartas */
+
+/* Estilos para a animação de virar a carta */
+.card {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+.card.flip {
+    transform: rotateY(180deg);
+}
+.face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Esconde o lado que está 'atrás" */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.front {
+    background-color: var(--dark-blue-3);
+    border: 2px solid var(--yellow-1);
+}
+.back {
+    background-color: #fff;
+    color: var(--dark-blue-1);
+    transform: rotateY(180deg); /* O verso começa já "virado" */
+    font-size: 2.5em; /* Tamanho do emoji */
+    border: 2px solid var(--dark-blue-2);
+}
+
+@media (max-width: 768px) {
+    .back {
+        font-size: 1.8em;
+    }
+}
+@media (max-width: 480px) {
+    .back {
+        font-size: 1.5em;
+    }
 }
