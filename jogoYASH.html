@@ -51,9 +51,8 @@
 
           <!-- Menu de configurações -->
           <div class="settings-menu">
-            <a href="login.html">Ir para Login</a>
-            <a href="ranking.html">Ranking Global</a>
-            <a href="cadastro.html">Editar Cadastro</a>
+            <a href="configYASH.html">Configurar Jogo</a>
+            <a href="configuracoes_p.html">Perfil</a>
           </div>
         </div>
       </div>
@@ -65,6 +64,16 @@
       </div>
     </main>
 
+    <div id="endGameModal" class="modal-overlay">
+        <div class="modal-content">
+            <h2 id="modalTitle">Parabéns!</h2>
+            <p id="modalMessage">Você encontrou todos os pares.</p>
+            <div class="modal-buttons">
+                <a href="#" id="playAgainBtn" class="modal-btn">Jogar Novamente</a>
+                <a href="configYASH.html" class="modal-btn secondary">Mudar Configurações</a>
+            </div>
+        </div>
+    </div>
     <script src="js/jogoYASH.js"></script>
 </body>
 </html>
